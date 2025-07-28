@@ -1,10 +1,10 @@
-💬 Challenge Foro Hub - API REST con Spring Boot
-📌 Descripción del Proyecto
+💬# Challenge Foro Hub - API REST con Spring Boot
+#📌 Descripción del Proyecto
 
 Este proyecto consiste en el desarrollo de una API REST de foro de discusión llamada Challenge Foro Hub, construida con Java y Spring Boot, como parte de mi formación en el programa ONE - Oracle Next Education de Alura Latam y Oracle.
 
 La API permite gestionar usuarios, tópicos de discusión y sus relaciones, con enfoque en buenas prácticas backend, incluyendo seguridad, validaciones y migraciones de base de datos.
-🚀 Funcionalidades principales
+🚀 ## Funcionalidades principales
 
     📝 Crear, listar y eliminar tópicos
 
@@ -16,7 +16,7 @@ La API permite gestionar usuarios, tópicos de discusión y sus relaciones, con 
 
     🗄️ Migraciones de base de datos con Flyway
 
-🛠️ Tecnologías utilizadas
+🛠️ ## Tecnologías utilizadas
 
     Java 21
 
@@ -34,7 +34,7 @@ La API permite gestionar usuarios, tópicos de discusión y sus relaciones, con 
 
     Insomnia/Postman (para pruebas de endpoints REST)
 
-📁 Estructura del Proyecto
+📁## Estructura del Proyecto
 
 src/
 ├── main/
@@ -48,7 +48,7 @@ src/
 │       ├── db/migration/         # Archivos SQL de migración Flyway
 │       └── application.properties
 
-🧪 Cómo ejecutar el proyecto
+🧪## Cómo ejecutar el proyecto
 
     Clona el repositorio:
 
@@ -69,7 +69,7 @@ Ejecuta el proyecto desde tu IDE o con Maven:
 
     Accede a la API mediante Insomnia/Postman y usa JWT para autenticar las peticiones.
 
-🔐 Seguridad y JWT
+🔐 ## Seguridad y JWT
 
 La API implementa seguridad basada en tokens JWT. Para autenticarte:
 
@@ -84,7 +84,7 @@ Obtén el token JWT en la respuesta y úsalo en el header de futuras peticiones:
 
     Authorization: Bearer tu_token
 
-⚠️ Validaciones y Errores Comunes
+⚠️## Validaciones y Errores Comunes
 
     ❌ Títulos y mensajes de tópicos deben ser únicos
 
@@ -92,7 +92,7 @@ Obtén el token JWT en la respuesta y úsalo en el header de futuras peticiones:
 
     ⚠️ Se maneja la validación y mensajes de error con clases personalizadas para mayor claridad
 
-🧠 Aprendizajes Clave
+🧠 ## Aprendizajes Clave
 
     Estructuración de APIs REST limpias y seguras
 
@@ -104,7 +104,7 @@ Obtén el token JWT en la respuesta y úsalo en el header de futuras peticiones:
 
     Implementación de relaciones entidad-usuario y control de duplicados
 
-🪪 Licencia
+🪪 ## Licencia
 
 Este proyecto es de uso educativo, con licencia MIT.
 ✨ Autor
