@@ -1,4 +1,4 @@
-💬# Challenge Foro Hub - API REST con Spring Boot
+# Challenge Foro Hub - API REST con Spring Boot
 #📌 Descripción del Proyecto
 
 Este proyecto consiste en el desarrollo de una API REST de foro de discusión llamada Challenge Foro Hub, construida con Java y Spring Boot, como parte de mi formación en el programa ONE - Oracle Next Education de Alura Latam y Oracle.
