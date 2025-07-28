@@ -116,4 +116,4 @@ Este proyecto es de uso educativo, con licencia MIT.
 Andrés Fernando Mena
 Aprendiz en desarrollo Backend Java | Programa ONE - Oracle Next Education
 
-¿Te gustaría que agregue un ejemplo de la migración SQL, uso de Swagger o algún endpoint documentado? Puedo extenderlo si lo necesitas.
+
