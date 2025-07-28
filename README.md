@@ -1,102 +1,115 @@
-Practicando Spring Boot: Challenge Foro Hub
+💬 Challenge Foro Hub - API REST con Spring Boot
+📌 Descripción del Proyecto
 
-🌐 API Rest - Challenge Foro Hub
+Este proyecto consiste en el desarrollo de una API REST de foro de discusión llamada Challenge Foro Hub, construida con Java y Spring Boot, como parte de mi formación en el programa ONE - Oracle Next Education de Alura Latam y Oracle.
 
-Este proyecto es una API REST desarrollada en Java con Spring Boot, como parte de mi formación en el programa ONE - Oracle Next Education de Alura Latam y Oracle. La aplicación simula un sistema de foros de discusión, permitiendo gestionar tópicos (temas de debate) y usuarios, implementando las mejores prácticas de desarrollo backend.
+La API permite gestionar usuarios, tópicos de discusión y sus relaciones, con enfoque en buenas prácticas backend, incluyendo seguridad, validaciones y migraciones de base de datos.
+🚀 Funcionalidades principales
 
-✨ Funcionalidades principales
+    📝 Crear, listar y eliminar tópicos
 
-✍️ Registro de nuevos tópicos (con validación de unicidad en título y mensaje)
+    👤 Asociar tópicos a usuarios registrados
 
-✉️ Listado de todos los tópicos registrados
+    🔐 Seguridad con autenticación basada en JWT
 
-❌ Eliminación de tópicos por ID
+    🛡️ Validaciones y manejo de errores personalizados
 
-🔒 Autenticación de usuarios con JWT (Login)
+    🗄️ Migraciones de base de datos con Flyway
 
-🔐 Seguridad de endpoints con Spring Security y filtros
+🛠️ Tecnologías utilizadas
 
-⚖️ Manejo centralizado de errores y respuestas personalizadas
+    Java 21
 
-📃 Migraciones automáticas de base de datos con Flyway
+    Spring Boot 3.3
 
-🛠️ Tecnologías y herramientas utilizadas
+    Spring Data JPA
 
-Java 21
+    MySQL (como base de datos relacional)
 
-Spring Boot 3
+    Flyway (gestión de migraciones SQL)
 
-Spring Data JPA
+    Spring Security (autenticación con JWT)
 
-Spring Security con JWT
+    Maven (gestión de dependencias)
 
-Flyway (para migraciones)
+    Insomnia/Postman (para pruebas de endpoints REST)
 
-MySQL como base de datos relacional
+📁 Estructura del Proyecto
 
-HikariCP (conexionado eficiente a la BD)
-
-Insomnia para pruebas de endpoints
-
-Swagger/OpenAPI para documentación
-
-📁 Estructura del proyecto
-
+src/
 ├── main/
-│   ├── java/com.aluracursos.challenge_foro_hub/
-│   │   ├── controller/ # Controladores REST (TopicoController, UsuarioController)
-│   │   ├── domain/     # Entidades y registros DTO (Topico, Usuario, etc.)
-│   │   ├── infra/      # Seguridad, Excepciones, Configuración (TokenService, etc.)
-│   │   └── repository/ # Repositorios JPA
+│   ├── java/
+│   │   └── com.aluracursos.challenge_foro_hub/
+│   │       ├── controller/       # Controladores REST (TopicoController, UsuarioController)
+│   │       ├── domain/           # Entidades y repositorios (Topico, Usuario)
+│   │       ├── infra/            # Seguridad JWT y configuración global
+│   │       └── service/          # Lógica de negocio y validaciones
 │   └── resources/
-│       ├── application.properties # Config BD y seguridad
-│       └── db/migration # Scripts de migración Flyway
+│       ├── db/migration/         # Archivos SQL de migración Flyway
+│       └── application.properties
 
-🔧 Ejecución del proyecto
+🧪 Cómo ejecutar el proyecto
 
-Clona el repositorio:
+    Clona el repositorio:
 
-git clone https://github.com/AndresMena1979/Challenge-Foro-Hub.git
+git clone https://github.com/TU_USUARIO/Challenge-Foro-Hub.git
 cd Challenge-Foro-Hub
 
-Configura las propiedades de tu base de datos en application.properties
+Configura el archivo application.properties:
 
-Ejecuta la aplicación desde tu IDE o usando Maven:
+spring.datasource.url=jdbc:mysql://localhost:3306/challenge_foro_hub
+spring.datasource.username=tu_usuario
+spring.datasource.password=tu_contraseña
 
-./mvnw spring-boot:run
+api.security.secret=tu_clave_secreta_para_jwt
 
-Realiza peticiones usando Insomnia o Postman.
+Ejecuta el proyecto desde tu IDE o con Maven:
 
-🧰 Lecciones y aprendizajes
+    ./mvnw spring-boot:run
 
-Durante este proyecto reforcé conocimientos clave del desarrollo backend:
+    Accede a la API mediante Insomnia/Postman y usa JWT para autenticar las peticiones.
 
-Diseño de APIs REST seguras y bien estructuradas
+🔐 Seguridad y JWT
 
-Implementación de autenticación y autorización con JWT y Spring Security
+La API implementa seguridad basada en tokens JWT. Para autenticarte:
 
-Validaciones robustas de datos y gestión de errores personalizados
+    Realiza un POST a /login con:
 
-Uso de migraciones automáticas para mantener consistencia en la base de datos
+{
+  "login": "usuario@ejemplo.com",
+  "clave": "123456"
+}
 
-Principios SOLID y separación de responsabilidades en la arquitectura
+Obtén el token JWT en la respuesta y úsalo en el header de futuras peticiones:
 
-📊 Estado del proyecto
+    Authorization: Bearer tu_token
 
-☑️ Finalizado y funcional
+⚠️ Validaciones y Errores Comunes
 
-Próximas mejoras:
+    ❌ Títulos y mensajes de tópicos deben ser únicos
 
-👀 Paginación y ordenamiento de tópicos
+    ❌ No se permite registrar usuarios o tópicos con campos vacíos
 
-📈 Estadísticas de actividad de usuarios
+    ⚠️ Se maneja la validación y mensajes de error con clases personalizadas para mayor claridad
 
-🌐 Deploy en nube (Railway o Render)
+🧠 Aprendizajes Clave
 
-🌟 Autor
+    Estructuración de APIs REST limpias y seguras
 
-Andres Fernando MenaAprendiz en desarrollo Backend Java | ONE - Oracle Next EducationLinkedIn | GitHub
+    Uso de migraciones con Flyway
 
-📄 Licencia
+    Configuración de filtros de seguridad en Spring Boot
 
-Este proyecto fue desarrollado con fines educativos y está bajo la licencia MIT.
+    Gestión de errores personalizados para mejorar la experiencia del cliente REST
+
+    Implementación de relaciones entidad-usuario y control de duplicados
+
+🪪 Licencia
+
+Este proyecto es de uso educativo, con licencia MIT.
+✨ Autor
+
+Andrés Fernando Mena
+Aprendiz en desarrollo Backend Java | Programa ONE - Oracle Next Education
+
+¿Te gustaría que agregue un ejemplo de la migración SQL, uso de Swagger o algún endpoint documentado? Puedo extenderlo si lo necesitas.
