@@ -1,4 +1,5 @@
-# Challenge Foro Hub - API REST con Spring Boot
+#Practicando Spring Framework: Challenge Foro Hub
+
 ---
 #📌 Descripción del Proyecto
 ---
