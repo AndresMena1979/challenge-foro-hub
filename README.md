@@ -1,100 +1,102 @@
-Challenge Foro Hub
+Practicando Spring Boot: Challenge Foro Hub
 
-Aplicación desarrollada como parte de mi formación en el programa ONE - Oracle Next Education de Alura Latam y Oracle. Este proyecto consiste en una API RESTful creada con Spring Boot, enfocada en la gestión de tópicos de discusión entre usuarios, simulando un foro. El proyecto está diseñado con buenas prácticas de arquitectura, seguridad y persistencia de datos.
+🌐 API Rest - Challenge Foro Hub
 
-Tecnologías y herramientas utilizadas
+Este proyecto es una API REST desarrollada en Java con Spring Boot, como parte de mi formación en el programa ONE - Oracle Next Education de Alura Latam y Oracle. La aplicación simula un sistema de foros de discusión, permitiendo gestionar tópicos (temas de debate) y usuarios, implementando las mejores prácticas de desarrollo backend.
+
+✨ Funcionalidades principales
+
+✍️ Registro de nuevos tópicos (con validación de unicidad en título y mensaje)
+
+✉️ Listado de todos los tópicos registrados
+
+❌ Eliminación de tópicos por ID
+
+🔒 Autenticación de usuarios con JWT (Login)
+
+🔐 Seguridad de endpoints con Spring Security y filtros
+
+⚖️ Manejo centralizado de errores y respuestas personalizadas
+
+📃 Migraciones automáticas de base de datos con Flyway
+
+🛠️ Tecnologías y herramientas utilizadas
 
 Java 21
 
-Spring Boot 3.3
+Spring Boot 3
 
 Spring Data JPA
 
 Spring Security con JWT
 
-Flyway para migraciones de base de datos
+Flyway (para migraciones)
 
-MySQL
+MySQL como base de datos relacional
 
-Maven
+HikariCP (conexionado eficiente a la BD)
 
-Insomnia (para pruebas de la API)
+Insomnia para pruebas de endpoints
 
-Características principales
+Swagger/OpenAPI para documentación
 
-✅ Gestión de tópicos
+📁 Estructura del proyecto
 
-Crear, listar, actualizar y eliminar tópicos.
+├── main/
+│   ├── java/com.aluracursos.challenge_foro_hub/
+│   │   ├── controller/ # Controladores REST (TopicoController, UsuarioController)
+│   │   ├── domain/     # Entidades y registros DTO (Topico, Usuario, etc.)
+│   │   ├── infra/      # Seguridad, Excepciones, Configuración (TokenService, etc.)
+│   │   └── repository/ # Repositorios JPA
+│   └── resources/
+│       ├── application.properties # Config BD y seguridad
+│       └── db/migration # Scripts de migración Flyway
 
-Validación para evitar títulos y mensajes duplicados.
+🔧 Ejecución del proyecto
 
-✅ Gestión de usuarios
+Clona el repositorio:
 
-Registro y eliminación de usuarios.
+git clone https://github.com/AndresMena1979/Challenge-Foro-Hub.git
+cd Challenge-Foro-Hub
 
-Asociación de tópicos a usuarios mediante llaves foráneas.
+Configura las propiedades de tu base de datos en application.properties
 
-✅ Seguridad con JWT
-
-Autenticación mediante token JWT.
-
-Protección de endpoints mediante filtros personalizados de seguridad.
-
-Manejo de errores de autenticación y autorización.
-
-✅ Migraciones de base de datos
-
-Creación de tablas y restricciones con Flyway.
-
-Reseteo de IDs automáticos tras eliminación de registros.
-
-✅ Validaciones y manejo de errores
-
-Validaciones con anotaciones como @NotBlank, @NotNull, @Email, etc.
-
-Control global de errores con clases personalizadas.
-
-Respuestas HTTP adecuadas: 201 (Creado), 400 (Bad Request), 404 (No encontrado), etc.
-
-✅ Documentación con Swagger (SpringDoc)
-
-Integración de Swagger UI.
-
-Configuración de esquemas de seguridad para enviar JWT desde la interfaz.
-
-Ejecución del proyecto
-
-Clonar el repositorio:
-
-git clone https://github.com/tuusuario/challenge-foro-hub.git
-
-Configurar el archivo application.properties:
-
-spring.datasource.url=jdbc:mysql://localhost:3306/challenge_foro_hub
-spring.datasource.username=tu_usuario
-spring.datasource.password=tu_contraseña
-api.security.secret=clave_secreta_para_jwt
-
-Ejecutar la aplicación desde tu IDE o usando Maven:
+Ejecuta la aplicación desde tu IDE o usando Maven:
 
 ./mvnw spring-boot:run
 
-Acceder a la documentación Swagger en:
+Realiza peticiones usando Insomnia o Postman.
 
-http://localhost:8080/swagger-ui.html
+🧰 Lecciones y aprendizajes
 
-Lecciones aprendidas
+Durante este proyecto reforcé conocimientos clave del desarrollo backend:
 
-Diseño de APIs RESTful limpias y seguras
+Diseño de APIs REST seguras y bien estructuradas
 
-Implementación de seguridad avanzada con JWT
+Implementación de autenticación y autorización con JWT y Spring Security
 
-Manejo de errores efectivo y validaciones robustas
+Validaciones robustas de datos y gestión de errores personalizados
 
-Uso de migraciones para gestión de base de datos en entornos reales
+Uso de migraciones automáticas para mantener consistencia en la base de datos
 
-Buenas prácticas en arquitectura backend con Spring Boot
+Principios SOLID y separación de responsabilidades en la arquitectura
 
-Estado del proyecto
+📊 Estado del proyecto
 
-✨ Proyecto finalizado, con posibilidad de extensión
+☑️ Finalizado y funcional
+
+Próximas mejoras:
+
+👀 Paginación y ordenamiento de tópicos
+
+📈 Estadísticas de actividad de usuarios
+
+🌐 Deploy en nube (Railway o Render)
+
+🌟 Autor
+
+Andres Fernando MenaAprendiz en desarrollo Backend Java | ONE - Oracle Next EducationLinkedIn | GitHub
+
+📄 Licencia
+
+Este proyecto fue desarrollado con fines educativos y está bajo la licencia MIT.
