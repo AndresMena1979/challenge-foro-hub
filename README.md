@@ -1,7 +1,7 @@
 # Practicando Spring Framework: Challenge Foro Hub
 
 ---
-#📌 Descripción del Proyecto
+# 📌 Descripción del Proyecto
 ---
 Este proyecto consiste en el desarrollo de una API REST de foro de discusión llamada Challenge Foro Hub, construida con Java y Spring Boot, como parte de mi formación en el programa ONE - Oracle Next Education de Alura Latam y Oracle.
 La API permite gestionar usuarios, tópicos de discusión y sus relaciones, con enfoque en buenas prácticas backend, incluyendo seguridad, validaciones y migraciones de base de datos.
@@ -36,7 +36,7 @@ La API permite gestionar usuarios, tópicos de discusión y sus relaciones, con 
 
     Insomnia/Postman (para pruebas de endpoints REST)
 
-📁## Estructura del Proyecto
+## 📁 Estructura del Proyecto
 ---
 
 ```src/
@@ -112,8 +112,9 @@ Obtén el token JWT en la respuesta y úsalo en el header de futuras peticiones:
 ## 🪪  Licencia
 ---
 Este proyecto es de uso educativo, con licencia MIT.
-✨ Autor
 
+## ✨ Autor
+---
 Andrés Fernando Mena
 Aprendiz en desarrollo Backend Java | Programa ONE - Oracle Next Education
 
