@@ -29,6 +29,14 @@ public class TopicoController {
     @PostMapping
     @Transactional
     public ResponseEntity registrarTopico(@RequestBody @Valid DatosRegistraTopico datos, UriComponentsBuilder uriComponentsBuilder) {
+
+        //---Para registros duplicados
+        boolean existe = topicoRepository.existsByTituloAndMensaje(datos.titulo(), datos.mensaje());
+        if (existe) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("Ya existe un tópico con ese título y mensaje.");
+        }
+       //------
+
         Usuario usuario = usuarioRepository.findById(datos.usuario_id())
                 .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
 
