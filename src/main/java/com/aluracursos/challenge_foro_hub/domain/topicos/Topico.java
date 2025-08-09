@@ -28,12 +28,12 @@ public class Topico {
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
-    public Topico(String titulo, String mensaje, String nombre_curso, Usuario usuario,LocalDateTime fecha_creacion) {
+    public Topico(String titulo, String mensaje, String nombre_curso, Usuario usuario, LocalDateTime fecha_creacion) {
         this.titulo = titulo;
         this.mensaje = mensaje;
         this.nombre_curso = nombre_curso;
         this.usuario = usuario;
-        this.fecha_creacion= fecha_creacion;
+        this.fecha_creacion = fecha_creacion;
     }
 
 
@@ -66,7 +66,6 @@ public class Topico {
             this.nombre_curso = datosActualizarTopico.nombre_curso();
         }
     }*/
-
 
 
 }

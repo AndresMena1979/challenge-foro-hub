@@ -1,5 +1,6 @@
-package com.aluracursos.challenge_foro_hub.infra;
+package com.aluracursos.challenge_foro_hub.infra.errores;
 
+import com.aluracursos.challenge_foro_hub.infra.ValidacionException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
